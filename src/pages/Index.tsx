@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background font-sans antialiased">
+      <Hero />
+      <About />
+      <Services />
+      <Contact />
+      
+      {/* Footer */}
+      <footer className="py-8 border-t border-border bg-card/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center text-sm text-muted-foreground">
+            <p>© {new Date().getFullYear()} Farouk Battikh. All rights reserved.</p>
+            <p className="mt-2">Built with passion for automation excellence.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
