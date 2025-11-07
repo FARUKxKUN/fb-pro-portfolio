@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import workflowYoutube from "@/assets/workflow-youtube-shorts.png";
 import workflowVideo from "@/assets/workflow-video.png";
 import workflowCRM from "@/assets/workflow-crm.png";
-import workflowAI from "@/assets/workflow-ai-booking.png";
+import workflowInstagram from "@/assets/workflow-instagram-dm.png";
 
 const Portfolio = () => {
   const projects = [
@@ -14,10 +14,10 @@ const Portfolio = () => {
       tags: ["AI Integration", "Content Creation", "Scheduling", "Google Gemini"],
     },
     {
-      title: "Telegram Study Assistant Bot",
-      description: "AI-powered chatbot that helps students with their studies. Features intelligent conversation, memory management, calendar availability checking, and automated booking system with Google Sheets integration.",
-      image: workflowAI,
-      tags: ["Chatbot", "AI Agent", "Education", "Telegram"],
+      title: "Instagram DM Auto Response",
+      description: "Intelligent Instagram direct message automation system with AI-powered responses. Features automatic message handling, conversation memory, calendar integration for availability checking, and smart booking capabilities through Google Sheets.",
+      image: workflowInstagram,
+      tags: ["Instagram", "AI Agent", "Auto-Response", "Social Media"],
     },
     {
       title: "Advanced Video Processing Pipeline",
