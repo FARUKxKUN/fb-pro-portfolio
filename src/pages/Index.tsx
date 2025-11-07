@@ -1,6 +1,8 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -8,7 +10,9 @@ const Index = () => {
     <div className="min-h-screen bg-background font-sans antialiased">
       <Hero />
       <About />
+      <Portfolio />
       <Services />
+      <Testimonials />
       <Contact />
       
       {/* Footer */}

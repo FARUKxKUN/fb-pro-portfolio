@@ -41,6 +41,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 className="group bg-primary hover:bg-primary/90 text-primary-foreground shadow-[var(--glow-primary)] hover:shadow-[0_0_60px_hsl(195_100%_50%_/_0.4)] transition-all duration-300"
+                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -50,6 +51,7 @@ const Hero = () => {
                 size="lg" 
                 variant="outline"
                 className="border-primary/30 hover:bg-primary/10 hover:border-primary/50 backdrop-blur-sm transition-all duration-300"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get in Touch
               </Button>
@@ -91,7 +93,7 @@ const Hero = () => {
               <img 
                 src={heroPhoto} 
                 alt="Farouk Battikh - AI Automation Expert"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover object-[60%_center]"
               />
             </div>
             
