@@ -99,9 +99,16 @@ const Hero = () => {
             
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-6 bg-card/80 backdrop-blur-md border border-border rounded-2xl p-6 shadow-xl">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">Job Success</div>
+              <div className="flex gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">100%</div>
+                  <div className="text-xs text-muted-foreground">Job Success</div>
+                </div>
+                <div className="w-px bg-border" />
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-secondary">100%</div>
+                  <div className="text-xs text-muted-foreground">Client Satisfaction</div>
+                </div>
               </div>
             </div>
           </div>
