@@ -97,6 +97,7 @@ const Services = () => {
                       ? 'bg-primary hover:bg-primary/90 shadow-[var(--glow-primary)]' 
                       : 'bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30'
                   }`}
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Get Started
                 </Button>
