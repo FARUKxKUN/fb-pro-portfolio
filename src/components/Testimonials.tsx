@@ -27,7 +27,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-24 bg-background relative overflow-hidden animate-fade-in" id="testimonials">
       {/* Background decorations */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
@@ -48,7 +48,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 animate-fade-in-up group"
+              className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 animate-fade-in-up group hover:-translate-y-1 hover:shadow-xl"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardContent className="p-6">

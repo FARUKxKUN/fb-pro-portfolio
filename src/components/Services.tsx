@@ -43,7 +43,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-card/30 relative overflow-hidden">
+    <section id="services" className="py-24 bg-card/30 relative overflow-hidden animate-fade-in">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -62,7 +62,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index}
-              className={`group relative backdrop-blur-sm transition-all duration-300 animate-fade-in-up ${
+              className={`group relative backdrop-blur-sm transition-all duration-300 animate-fade-in-up hover:-translate-y-1 ${
                 service.highlighted 
                   ? 'bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/50 shadow-[0_0_40px_hsl(195_100%_50%_/_0.2)] scale-105' 
                   : 'bg-card/50 border-border hover:border-primary/30 hover:shadow-[0_0_30px_hsl(195_100%_50%_/_0.1)]'

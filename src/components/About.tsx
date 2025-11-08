@@ -26,7 +26,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-background relative overflow-hidden">
+    <section id="about" className="py-24 bg-background relative overflow-hidden animate-fade-in">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
@@ -49,7 +49,7 @@ const About = () => {
           {skills.map((skill, index) => (
             <Card 
               key={index}
-              className="group bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(195_100%_50%_/_0.2)] animate-fade-in-up"
+              className="group bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(195_100%_50%_/_0.2)] animate-fade-in-up hover:-translate-y-1"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardContent className="p-8">

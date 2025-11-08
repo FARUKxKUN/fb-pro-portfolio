@@ -6,7 +6,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-background relative overflow-hidden">
+    <section id="contact" className="py-24 bg-background relative overflow-hidden animate-fade-in">
       {/* Background decorations */}
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
@@ -26,7 +26,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-6 animate-fade-in-up">
-            <Card className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300">
+            <Card className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
@@ -42,7 +42,7 @@ const Contact = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300">
+            <Card className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
@@ -58,7 +58,7 @@ const Contact = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300">
+            <Card className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">

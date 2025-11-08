@@ -54,7 +54,7 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 animate-fade-in-up overflow-hidden group"
+              className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 animate-fade-in-up overflow-hidden group hover:scale-[1.02]"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative overflow-hidden bg-muted">
