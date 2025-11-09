@@ -19,7 +19,7 @@ const CaseStudies = () => {
       ],
       technologies: ["n8n", "YouTube API", "OpenAI", "Cloud Storage"],
       image: workflowYoutubeShorts,
-      timeline: "2 weeks",
+      timeline: "5 days",
       price: "$120",
     },
     {
@@ -34,7 +34,7 @@ const CaseStudies = () => {
       ],
       technologies: ["n8n", "OpenAI GPT-4", "Webhook APIs", "CRM Integration"],
       image: workflowInstagramDm,
-      timeline: "4 weeks",
+      timeline: "10 days",
       price: "$297",
     },
     {
@@ -49,7 +49,7 @@ const CaseStudies = () => {
       ],
       technologies: ["n8n", "Google Sheets", "Airtable", "Email Integration"],
       image: workflowCrm,
-      timeline: "1 week",
+      timeline: "3 days",
       price: "$60",
     },
   ];
