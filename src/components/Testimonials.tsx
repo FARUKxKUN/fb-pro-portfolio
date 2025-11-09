@@ -24,6 +24,15 @@ const Testimonials = () => {
       rate: "$8.00 /hr",
       hours: "37 hours",
     },
+    {
+      image: testimonial1, // Using same placeholder, can be updated
+      project: "YouTube Shorts Automation - n8n",
+      rating: 5.0,
+      date: "Nov 9, 2025 - Nov 9, 2025",
+      feedback: "It was great working with Farouk. He is patient, reliable, and delivers exactly what's expected. Highly recommended!",
+      price: "$120.00",
+      type: "Fixed price",
+    },
   ];
 
   return (
@@ -44,7 +53,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
