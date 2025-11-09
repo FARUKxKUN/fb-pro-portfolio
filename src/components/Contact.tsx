@@ -3,8 +3,83 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { z } from "zod";
+import { useState } from "react";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  subject: z.string().trim().min(1, "Subject is required").max(200, "Subject must be less than 200 characters"),
+  message: z.string().trim().min(1, "Message is required").max(2000, "Message must be less than 2000 characters"),
+});
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setErrors({});
+    setIsSubmitting(true);
+
+    try {
+      // Validate form data
+      const validatedData = contactSchema.parse(formData);
+
+      // Send email via edge function
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: validatedData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        const fieldErrors: Record<string, string> = {};
+        error.errors.forEach((err) => {
+          if (err.path[0]) {
+            fieldErrors[err.path[0].toString()] = err.message;
+          }
+        });
+        setErrors(fieldErrors);
+        toast({
+          title: "Validation error",
+          description: "Please check the form fields and try again.",
+          variant: "destructive",
+        });
+      } else {
+        console.error("Error sending message:", error);
+        toast({
+          title: "Error",
+          description: "Failed to send message. Please try again later.",
+          variant: "destructive",
+        });
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section id="contact" className="py-24 bg-background relative overflow-hidden animate-fade-in">
       {/* Background decorations */}
@@ -75,10 +150,9 @@ const Contact = () => {
             </Card>
           </div>
           
-          {/* Contact Form */}
           <Card className="lg:col-span-2 bg-card/50 backdrop-blur-sm border-border animate-fade-in-up delay-200">
             <CardContent className="p-8">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
@@ -87,8 +161,11 @@ const Contact = () => {
                     <Input 
                       id="name"
                       placeholder="Your name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="bg-background/50 border-border focus:border-primary transition-colors"
                     />
+                    {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
                   </div>
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
@@ -98,8 +175,11 @@ const Contact = () => {
                       id="email"
                       type="email"
                       placeholder="your@email.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="bg-background/50 border-border focus:border-primary transition-colors"
                     />
+                    {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
                   </div>
                 </div>
                 
@@ -110,8 +190,11 @@ const Contact = () => {
                   <Input 
                     id="subject"
                     placeholder="How can I help you?"
+                    value={formData.subject}
+                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     className="bg-background/50 border-border focus:border-primary transition-colors"
                   />
+                  {errors.subject && <p className="text-sm text-destructive">{errors.subject}</p>}
                 </div>
                 
                 <div className="space-y-2">
@@ -122,15 +205,19 @@ const Contact = () => {
                     id="message"
                     placeholder="Tell me about your project..."
                     rows={6}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="bg-background/50 border-border focus:border-primary transition-colors resize-none"
                   />
+                  {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
                 </div>
                 
                 <Button 
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full bg-primary hover:bg-primary/90 shadow-[var(--glow-primary)] hover:shadow-[0_0_60px_hsl(195_100%_50%_/_0.4)] transition-all duration-300"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
