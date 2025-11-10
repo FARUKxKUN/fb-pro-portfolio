@@ -1,9 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, TrendingUp, Clock, DollarSign } from "lucide-react";
-import workflowYoutubeShorts from "@/assets/workflow-youtube-shorts.png";
+import workflowYoutubeShorts from "@/assets/testimonial-youtube-shorts.png";
 import workflowInstagramDm from "@/assets/workflow-instagram-dm.png";
-import workflowCrm from "@/assets/workflow-crm.png";
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -15,7 +14,7 @@ const CaseStudies = () => {
       results: [
         { metric: "95%", label: "Time Saved", icon: Clock },
         { metric: "300%", label: "Content Output Increase", icon: TrendingUp },
-        { metric: "$2,400", label: "Monthly Labor Cost Saved", icon: DollarSign },
+        { metric: "$1,800", label: "Monthly Labor Cost Saved", icon: DollarSign },
       ],
       technologies: ["n8n", "YouTube API", "OpenAI", "Cloud Storage"],
       image: workflowYoutubeShorts,
@@ -36,21 +35,6 @@ const CaseStudies = () => {
       image: workflowInstagramDm,
       timeline: "10 days",
       price: "$297",
-    },
-    {
-      title: "Customer Management System Automation",
-      client: "B2B Service Provider",
-      challenge: "Manual data entry across multiple platforms led to errors, delayed follow-ups, and missed opportunities.",
-      solution: "Created unified automation connecting CRM, email, and project management tools with smart data syncing and automated workflows.",
-      results: [
-        { metric: "90%", label: "Data Entry Eliminated", icon: Clock },
-        { metric: "100%", label: "Data Accuracy Improvement", icon: TrendingUp },
-        { metric: "50%", label: "Faster Customer Onboarding", icon: ArrowRight },
-      ],
-      technologies: ["n8n", "Google Sheets", "Airtable", "Email Integration"],
-      image: workflowCrm,
-      timeline: "3 days",
-      price: "$60",
     },
   ];
 
