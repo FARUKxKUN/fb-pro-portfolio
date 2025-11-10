@@ -21,7 +21,7 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in-up">
             <div className="inline-block">
               <span className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold backdrop-blur-sm">
-                AI Automation Expert
+                AI Automation Expert & Consultant
               </span>
             </div>
             
@@ -32,9 +32,11 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Building intelligent workflows through{" "}
-              <span className="text-primary font-semibold">n8n automation</span>,{" "}
-              <span className="text-secondary font-semibold">AI integration</span>, and seamless system orchestration.
+              Transforming businesses with intelligent{" "}
+              <span className="text-secondary font-semibold">AI automation</span>{" "}
+              solutions. Specializing in{" "}
+              <span className="text-primary font-semibold">n8n</span>, I deliver 
+              end-to-end workflow automation across all platforms.
             </p>
             
             <div className="flex flex-wrap gap-4">

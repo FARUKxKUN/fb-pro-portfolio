@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 import testimonial1 from "@/assets/testimonial-1.png";
 import testimonial2 from "@/assets/testimonial-2.png";
+import testimonialYoutubeShorts from "@/assets/testimonial-youtube-shorts-review.png";
 
 const Testimonials = () => {
   const testimonials = [
@@ -25,7 +26,7 @@ const Testimonials = () => {
       hours: "37 hours",
     },
     {
-      image: testimonial1, // Using same placeholder, can be updated
+      image: testimonialYoutubeShorts,
       project: "YouTube Shorts Automation - n8n",
       rating: 5.0,
       date: "Nov 9, 2025 - Nov 9, 2025",

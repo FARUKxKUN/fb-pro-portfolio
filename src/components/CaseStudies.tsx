@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, TrendingUp, Clock, DollarSign } from "lucide-react";
-import workflowYoutubeShorts from "@/assets/testimonial-youtube-shorts.png";
+import workflowYoutubeShorts from "@/assets/workflow-youtube-shorts.png";
 import workflowInstagramDm from "@/assets/workflow-instagram-dm.png";
 
 const CaseStudies = () => {
