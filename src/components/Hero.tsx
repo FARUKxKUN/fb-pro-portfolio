@@ -16,22 +16,22 @@ const Hero = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-8 animate-fade-in-up">
+          <div className="space-y-6 md:space-y-8 animate-fade-in-up">
             <div className="inline-block">
-              <span className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold backdrop-blur-sm">
+              <span className="px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs md:text-sm font-semibold backdrop-blur-sm">
                 AI Automation Expert & Consultant
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
                 Farouk Battikh
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
               Transforming businesses with intelligent{" "}
               <span className="text-secondary font-semibold">AI automation</span>{" "}
               solutions. Specializing in{" "}
@@ -39,10 +39,10 @@ const Hero = () => {
               end-to-end workflow automation across all platforms.
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button 
                 size="lg" 
-                className="group bg-primary hover:bg-primary/90 text-primary-foreground shadow-[var(--glow-primary)] hover:shadow-[0_0_60px_hsl(195_100%_50%_/_0.4)] transition-all duration-300"
+                className="w-full sm:w-auto group bg-primary hover:bg-primary/90 text-primary-foreground shadow-[var(--glow-primary)] hover:shadow-[0_0_60px_hsl(195_100%_50%_/_0.4)] transition-all duration-300"
                 onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View My Work
@@ -52,7 +52,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-primary/30 hover:bg-primary/10 hover:border-primary/50 backdrop-blur-sm transition-all duration-300"
+                className="w-full sm:w-auto border-primary/30 hover:bg-primary/10 hover:border-primary/50 backdrop-blur-sm transition-all duration-300"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get in Touch
@@ -110,16 +110,16 @@ const Hero = () => {
             </div>
             
             {/* Floating badge */}
-            <div className="absolute -bottom-6 -right-6 bg-card/80 backdrop-blur-md border border-border rounded-2xl p-6 shadow-xl">
-              <div className="flex gap-6">
+            <div className="absolute -bottom-4 sm:-bottom-6 -right-2 sm:-right-6 bg-card/80 backdrop-blur-md border border-border rounded-xl sm:rounded-2xl p-3 sm:p-6 shadow-xl">
+              <div className="flex gap-3 sm:gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">100%</div>
-                  <div className="text-xs text-muted-foreground">Job Success</div>
+                  <div className="text-xl sm:text-3xl font-bold text-primary">100%</div>
+                  <div className="text-[10px] sm:text-xs text-muted-foreground">Job Success</div>
                 </div>
                 <div className="w-px bg-border" />
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-secondary">100%</div>
-                  <div className="text-xs text-muted-foreground">Client Satisfaction</div>
+                  <div className="text-xl sm:text-3xl font-bold text-secondary">100%</div>
+                  <div className="text-[10px] sm:text-xs text-muted-foreground">Client Satisfaction</div>
                 </div>
               </div>
             </div>

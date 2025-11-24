@@ -45,27 +45,27 @@ const CaseStudies = () => {
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Case Studies
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Real-world automation solutions delivering measurable results
           </p>
         </div>
 
-        <div className="space-y-12 max-w-6xl mx-auto">
+        <div className="space-y-8 md:space-y-12 max-w-6xl mx-auto">
           {caseStudies.map((study, index) => (
             <Card 
               key={index}
               className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 animate-fade-in-up overflow-hidden group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-0 md:gap-6">
                 {/* Image Section */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden h-48 sm:h-56 md:h-auto">
                   <img 
                     src={study.image} 
                     alt={study.title}
@@ -75,38 +75,38 @@ const CaseStudies = () => {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-6 md:p-8">
-                  <CardHeader className="p-0 mb-6">
+                <div className="p-5 sm:p-6 md:p-8">
+                  <CardHeader className="p-0 mb-4 sm:mb-6">
                     <div className="flex items-start justify-between mb-2">
-                      <CardTitle className="text-2xl md:text-3xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                      <CardTitle className="text-xl sm:text-2xl md:text-3xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                         {study.title}
                       </CardTitle>
                     </div>
-                    <p className="text-sm text-muted-foreground">{study.client}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{study.client}</p>
                   </CardHeader>
 
-                  <CardContent className="p-0 space-y-6">
+                  <CardContent className="p-0 space-y-4 sm:space-y-6">
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Challenge</h4>
-                      <p className="text-sm text-muted-foreground">{study.challenge}</p>
+                      <h4 className="font-semibold text-sm sm:text-base text-primary mb-1 sm:mb-2">Challenge</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{study.challenge}</p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Solution</h4>
-                      <p className="text-sm text-muted-foreground">{study.solution}</p>
+                      <h4 className="font-semibold text-sm sm:text-base text-primary mb-1 sm:mb-2">Solution</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{study.solution}</p>
                     </div>
 
                     {/* Results Metrics */}
                     <div>
-                      <h4 className="font-semibold text-primary mb-3">Results</h4>
-                      <div className="grid grid-cols-3 gap-4">
+                      <h4 className="font-semibold text-sm sm:text-base text-primary mb-2 sm:mb-3">Results</h4>
+                      <div className="grid grid-cols-3 gap-2 sm:gap-4">
                         {study.results.map((result, idx) => {
                           const Icon = result.icon;
                           return (
                             <div key={idx} className="text-center">
-                              <Icon className="h-5 w-5 text-secondary mx-auto mb-2" />
-                              <div className="text-2xl font-bold text-foreground">{result.metric}</div>
-                              <div className="text-xs text-muted-foreground">{result.label}</div>
+                              <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-secondary mx-auto mb-1 sm:mb-2" />
+                              <div className="text-base sm:text-xl md:text-2xl font-bold text-foreground">{result.metric}</div>
+                              <div className="text-[10px] sm:text-xs text-muted-foreground">{result.label}</div>
                             </div>
                           );
                         })}
@@ -115,10 +115,10 @@ const CaseStudies = () => {
 
                     {/* Technologies */}
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">Technologies</h4>
-                      <div className="flex flex-wrap gap-2">
+                      <h4 className="font-semibold text-sm sm:text-base text-primary mb-1 sm:mb-2">Technologies</h4>
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
                         {study.technologies.map((tech, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-xs">
+                          <Badge key={idx} variant="secondary" className="text-[10px] sm:text-xs">
                             {tech}
                           </Badge>
                         ))}
@@ -126,8 +126,8 @@ const CaseStudies = () => {
                     </div>
 
                     {/* Footer Info */}
-                    <div className="flex items-center justify-between pt-4 border-t border-border text-sm">
-                      <div className="flex gap-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0 pt-3 sm:pt-4 border-t border-border text-xs sm:text-sm">
+                      <div className="flex flex-wrap gap-2 sm:gap-4">
                         <span className="text-muted-foreground">Timeline: <span className="text-foreground font-semibold">{study.timeline}</span></span>
                         <span className="text-muted-foreground">Investment: <span className="text-foreground font-semibold">{study.price}</span></span>
                       </div>

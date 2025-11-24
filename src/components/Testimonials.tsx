@@ -43,47 +43,47 @@ const Testimonials = () => {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Client Testimonials
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Real feedback from satisfied clients on Upwork
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
               className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 animate-fade-in-up group hover:-translate-y-1 hover:shadow-xl"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <Quote className="h-10 w-10 text-primary/20 mb-4" />
-                  <h3 className="text-lg font-semibold text-primary mb-2">
+              <CardContent className="p-4 sm:p-6">
+                <div className="mb-3 sm:mb-4">
+                  <Quote className="h-8 w-8 sm:h-10 sm:w-10 text-primary/20 mb-3 sm:mb-4" />
+                  <h3 className="text-base sm:text-lg font-semibold text-primary mb-2">
                     {testimonial.project}
                   </h3>
                   
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-2">
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
+                        <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-secondary text-secondary" />
                       ))}
                     </div>
-                    <span className="font-bold">{testimonial.rating}</span>
-                    <span className="text-sm text-muted-foreground">| {testimonial.date}</span>
+                    <span className="font-bold text-sm sm:text-base">{testimonial.rating}</span>
+                    <span className="text-xs sm:text-sm text-muted-foreground">| {testimonial.date}</span>
                   </div>
                 </div>
 
-                <blockquote className="text-foreground mb-6 leading-relaxed italic">
+                <blockquote className="text-sm sm:text-base text-foreground mb-4 sm:mb-6 leading-relaxed italic">
                   "{testimonial.feedback}"
                 </blockquote>
 
-                <div className="flex flex-wrap gap-4 text-sm text-muted-foreground pt-4 border-t border-border">
+                <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground pt-3 sm:pt-4 border-t border-border">
                   <span className="font-semibold text-foreground">{testimonial.price}</span>
                   {testimonial.rate && (
                     <>
@@ -95,7 +95,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Original Screenshot - Hidden but available */}
-                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="mt-3 sm:mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <img 
                     src={testimonial.image} 
                     alt={`${testimonial.project} review`}
