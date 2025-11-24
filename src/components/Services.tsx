@@ -47,18 +47,18 @@ const Services = () => {
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Services & Solutions
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Comprehensive automation services tailored to your business needs
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card 
               key={index}
@@ -70,23 +70,23 @@ const Services = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {service.highlighted && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+                <div className="absolute -top-3 sm:-top-4 left-1/2 -translate-x-1/2 px-3 py-0.5 sm:px-4 sm:py-1 bg-primary text-primary-foreground text-xs sm:text-sm font-semibold rounded-full">
                   Most Popular
                 </div>
               )}
               
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-                <div className="mb-6">
-                  <span className="text-3xl font-bold text-primary">{service.price}</span>
-                  {service.price !== "Custom" && <span className="text-muted-foreground"> /hr</span>}
+              <CardContent className="p-5 sm:p-6 md:p-8">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">{service.title}</h3>
+                <div className="mb-4 sm:mb-6">
+                  <span className="text-2xl sm:text-3xl font-bold text-primary">{service.price}</span>
+                  {service.price !== "Custom" && <span className="text-muted-foreground text-sm sm:text-base"> /hr</span>}
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm text-muted-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>

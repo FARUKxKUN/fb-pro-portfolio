@@ -87,29 +87,29 @@ const Contact = () => {
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Let's Build Something Amazing
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Ready to transform your business with intelligent automation? Get in touch.
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-6 animate-fade-in-up">
+          <div className="space-y-4 sm:space-y-6 animate-fade-in-up">
             <Card className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <a href="mailto:battikhfaroukwork@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <h3 className="font-semibold mb-1 text-sm sm:text-base">Email</h3>
+                    <a href="mailto:battikhfaroukwork@gmail.com" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all">
                       battikhfaroukwork@gmail.com
                     </a>
                   </div>
@@ -118,14 +118,14 @@ const Contact = () => {
             </Card>
             
             <Card className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
-                    <a href="tel:+21621298551" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <h3 className="font-semibold mb-1 text-sm sm:text-base">Phone</h3>
+                    <a href="tel:+21621298551" className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors">
                       +216 21 298 551
                     </a>
                   </div>
@@ -134,14 +134,14 @@ const Contact = () => {
             </Card>
             
             <Card className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-primary/10 border border-primary/20">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-sm text-muted-foreground">
+                    <h3 className="font-semibold mb-1 text-sm sm:text-base">Location</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
                       Available Worldwide
                     </p>
                   </div>
@@ -151,7 +151,7 @@ const Contact = () => {
           </div>
           
           <Card className="lg:col-span-2 bg-card/50 backdrop-blur-sm border-border animate-fade-in-up delay-200">
-            <CardContent className="p-8">
+            <CardContent className="p-5 sm:p-6 md:p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-2">

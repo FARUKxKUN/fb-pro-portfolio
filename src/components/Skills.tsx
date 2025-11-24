@@ -84,32 +84,32 @@ const Skills = () => {
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16 animate-fade-in-up">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Technologies & Tools
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Expert in modern automation platforms and integration technologies
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {skills.map((skill, index) => (
             <Card 
               key={index}
               className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/30 transition-all duration-300 animate-fade-in-up group hover:-translate-y-1 hover:shadow-xl"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <CardContent className="p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 rounded-xl bg-primary/10 border border-primary/20 group-hover:scale-110 transition-transform duration-300">
-                    <skill.icon className={`h-8 w-8 ${skill.color}`} />
+              <CardContent className="p-4 sm:p-6 text-center">
+                <div className="flex justify-center mb-3 sm:mb-4">
+                  <div className="p-2 sm:p-3 rounded-xl bg-primary/10 border border-primary/20 group-hover:scale-110 transition-transform duration-300">
+                    <skill.icon className={`h-6 w-6 sm:h-8 sm:w-8 ${skill.color}`} />
                   </div>
                 </div>
-                <h3 className="font-semibold text-lg mb-1">{skill.name}</h3>
-                <p className="text-sm text-muted-foreground">{skill.description}</p>
+                <h3 className="font-semibold text-sm sm:text-base md:text-lg mb-1">{skill.name}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">{skill.description}</p>
               </CardContent>
             </Card>
           ))}
