@@ -25,12 +25,6 @@ const Portfolio = () => {
       image: workflowVideo,
       tags: ["Video Processing", "AI Audio", "Cloud Storage", "Media Automation"],
     },
-    {
-      title: "CRM Workflow Automation",
-      description: "Complete CRM automation system triggered by form submissions. Creates tasks, manages folders, generates database pages in Notion, writes personalized welcome messages using OpenAI, and sends notifications across multiple platforms.",
-      image: workflowCRM,
-      tags: ["CRM", "Notion", "OpenAI", "Multi-channel Notifications"],
-    },
   ];
 
   return (
