@@ -8,55 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 260 60% 8%;
-    --foreground: 280 100% 98%;
+    --background: 210 50% 8%;
+    --foreground: 200 20% 98%;
 
-    --card: 260 50% 12%;
-    --card-foreground: 280 100% 98%;
+    --card: 215 45% 12%;
+    --card-foreground: 200 20% 98%;
 
-    --popover: 260 50% 12%;
-    --popover-foreground: 280 100% 98%;
+    --popover: 215 45% 12%;
+    --popover-foreground: 200 20% 98%;
 
-    --primary: 320 100% 60%;
+    --primary: 195 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 100% 50%;
-    --secondary-foreground: 260 60% 8%;
+    --secondary: 25 95% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 260 40% 20%;
-    --muted-foreground: 280 30% 70%;
+    --muted: 215 30% 20%;
+    --muted-foreground: 200 20% 70%;
 
-    --accent: 280 100% 65%;
+    --accent: 190 90% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 90% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 280 70% 30%;
-    --input: 260 50% 15%;
-    --ring: 320 100% 60%;
+    --border: 200 40% 25%;
+    --input: 215 45% 15%;
+    --ring: 195 100% 50%;
 
     --radius: 0.75rem;
 
-    /* Game/Anime design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(320 100% 60%) 0%, hsl(280 100% 65%) 50%, hsl(240 100% 70%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(180 100% 50%) 0%, hsl(200 100% 60%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(260 60% 8%) 0%, hsl(280 70% 12%) 30%, hsl(300 80% 15%) 70%, hsl(320 90% 20%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(260 50% 12% / 0.8) 0%, hsl(280 60% 15% / 0.9) 100%);
-    --glow-primary: 0 0 60px hsl(320 100% 60% / 0.6), 0 0 30px hsl(280 100% 65% / 0.4);
-    --glow-secondary: 0 0 50px hsl(180 100% 50% / 0.5), 0 0 25px hsl(200 100% 60% / 0.3);
-    --glow-accent: 0 0 40px hsl(280 100% 65% / 0.5);
+    /* Cyberpunk/Masculine design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(200 90% 60%) 50%, hsl(210 85% 65%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(35 95% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 50% 8%) 0%, hsl(200 55% 10%) 30%, hsl(195 60% 12%) 70%, hsl(190 65% 15%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(215 45% 12% / 0.8) 0%, hsl(200 50% 14% / 0.9) 100%);
+    --glow-primary: 0 0 60px hsl(195 100% 50% / 0.6), 0 0 30px hsl(200 90% 60% / 0.4);
+    --glow-secondary: 0 0 50px hsl(25 95% 55% / 0.5), 0 0 25px hsl(35 95% 60% / 0.3);
+    --glow-accent: 0 0 40px hsl(190 90% 50% / 0.5);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
-    --sidebar-background: 260 50% 12%;
-    --sidebar-foreground: 280 100% 98%;
-    --sidebar-primary: 320 100% 60%;
+    --sidebar-background: 215 45% 12%;
+    --sidebar-foreground: 200 20% 98%;
+    --sidebar-primary: 195 100% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 260 40% 20%;
-    --sidebar-accent-foreground: 280 100% 98%;
-    --sidebar-border: 280 70% 30%;
-    --sidebar-ring: 320 100% 60%;
+    --sidebar-accent: 215 30% 20%;
+    --sidebar-accent-foreground: 200 20% 98%;
+    --sidebar-border: 200 40% 25%;
+    --sidebar-ring: 195 100% 50%;
   }
 }
 

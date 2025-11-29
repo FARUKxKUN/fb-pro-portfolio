@@ -9,10 +9,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(255,0,255,0.5)] hover:shadow-[0_0_30px_rgba(255,0,255,0.7)] border-2 border-primary/50 hover:scale-105 active:scale-95",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(0,200,255,0.5)] hover:shadow-[0_0_30px_rgba(0,200,255,0.7)] border-2 border-primary/50 hover:scale-105 active:scale-95",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 border-2 border-destructive/50",
-        outline: "border-2 border-primary bg-background/50 backdrop-blur-sm text-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(255,0,255,0.3)]",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[0_0_20px_rgba(0,255,255,0.5)] hover:shadow-[0_0_30px_rgba(0,255,255,0.7)] border-2 border-secondary/50 hover:scale-105 active:scale-95",
+        outline: "border-2 border-primary bg-background/50 backdrop-blur-sm text-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(0,200,255,0.3)]",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[0_0_20px_rgba(255,140,0,0.5)] hover:shadow-[0_0_30px_rgba(255,140,0,0.7)] border-2 border-secondary/50 hover:scale-105 active:scale-95",
         ghost: "hover:bg-accent/20 hover:text-accent-foreground backdrop-blur-sm",
         link: "text-primary underline-offset-4 hover:underline hover:text-primary/80",
       },
