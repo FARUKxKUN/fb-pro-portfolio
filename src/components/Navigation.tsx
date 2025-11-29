@@ -31,7 +31,7 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-lg"
+          ? "bg-background/90 backdrop-blur-xl border-b-2 border-primary/30 shadow-[0_0_30px_rgba(255,0,255,0.2)]"
           : "bg-transparent"
       }`}
     >
@@ -40,18 +40,18 @@ const Navigation = () => {
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="text-2xl font-black bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent hover:scale-110 transition-all duration-300 drop-shadow-[0_0_10px_rgba(255,0,255,0.5)]"
           >
             FB
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium"
+                className="text-foreground/80 hover:text-primary transition-all duration-200 font-bold uppercase text-sm tracking-wider hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,0,255,0.5)]"
               >
                 {item.label}
               </button>
@@ -62,7 +62,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden border-2 border-primary/30 hover:border-primary hover:shadow-[0_0_20px_rgba(255,0,255,0.4)]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -80,7 +80,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-3 text-foreground/80 hover:text-primary hover:bg-primary/10 transition-all duration-200 font-medium rounded-lg"
+                className="block w-full text-left px-4 py-3 text-foreground/80 hover:text-primary hover:bg-primary/20 hover:border-l-4 hover:border-primary transition-all duration-200 font-bold uppercase text-sm tracking-wider rounded-lg"
               >
                 {item.label}
               </button>
