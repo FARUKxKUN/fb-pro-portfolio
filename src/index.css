@@ -39,13 +39,13 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Cyberpunk/Masculine design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(200 90% 60%) 50%, hsl(210 85% 65%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%) 0%, hsl(190 95% 55%) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(35 95% 60%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 50% 8%) 0%, hsl(200 55% 10%) 30%, hsl(195 60% 12%) 70%, hsl(190 65% 15%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(215 45% 12% / 0.8) 0%, hsl(200 50% 14% / 0.9) 100%);
-    --glow-primary: 0 0 60px hsl(195 100% 50% / 0.6), 0 0 30px hsl(200 90% 60% / 0.4);
-    --glow-secondary: 0 0 50px hsl(25 95% 55% / 0.5), 0 0 25px hsl(35 95% 60% / 0.3);
-    --glow-accent: 0 0 40px hsl(190 90% 50% / 0.5);
+    --gradient-hero: linear-gradient(135deg, hsl(210 50% 6%) 0%, hsl(205 50% 8%) 50%, hsl(200 45% 10%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(210 45% 10% / 0.9) 0%, hsl(205 50% 12% / 0.95) 100%);
+    --glow-primary: 0 0 50px hsl(195 100% 50% / 0.5), 0 0 25px hsl(195 100% 55% / 0.3);
+    --glow-secondary: 0 0 50px hsl(25 95% 55% / 0.5), 0 0 25px hsl(30 95% 60% / 0.3);
+    --glow-accent: 0 0 40px hsl(195 100% 50% / 0.4);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     
