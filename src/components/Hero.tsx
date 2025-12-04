@@ -27,7 +27,7 @@ const Hero = () => {
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight">
-              <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,200,255,0.5)]">
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(0,200,255,0.5)]">
                 Farouk Battikh
               </span>
             </h1>
@@ -101,15 +101,11 @@ const Hero = () => {
           
           {/* Image */}
           <div className="relative animate-fade-in-up delay-200">
-            <div className="relative rounded-2xl overflow-hidden border-4 border-primary/40 shadow-[0_0_50px_rgba(0,200,255,0.4)] animate-pulse-glow bg-background">
-              {/* Dark gradient overlay to blend the light photo background */}
-              <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/80 z-10" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 mix-blend-color z-10" />
+            <div className="relative rounded-2xl overflow-hidden border-4 border-primary/40 shadow-[0_0_50px_rgba(0,200,255,0.4)] animate-pulse-glow">
               <img 
                 src={heroPhoto} 
                 alt="Farouk Battikh - AI Automation Expert"
-                className="w-full h-auto object-cover object-[50%_20%] mix-blend-luminosity"
-                style={{ filter: 'contrast(1.1) brightness(0.9)' }}
+                className="w-full h-auto object-cover object-[50%_20%]"
               />
             </div>
             
